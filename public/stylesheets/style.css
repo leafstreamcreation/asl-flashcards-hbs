@@ -1,14 +1,27 @@
-#navbar {
-  list-style-type: none;
+html {
+  background-color: cornflowerblue;
+}
+
+.navbar {
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  width: 100vw;
+}
+
+.navbar > ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
 }
 
 li {
-  display: inline;
-  float: left;
+  list-style: none;
 }
 
 li a {
@@ -53,3 +66,172 @@ li a:hover {
   background-color: #333;
   color: white;
 }
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.signup-form > * {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form > * {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.login-form > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.login-page > a {
+  text-decoration: none;
+  color: black;
+}
+
+.deck-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.deck-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  height: 5vw;
+  background-color: goldenrod;
+  margin-bottom: 20px;
+}
+
+.deck-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.deck-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.train-link {
+  width: 90%;
+}
+
+.train-link:hover {
+  background-color: rgb(216, 189, 121);
+}
+
+.train-button {
+  height: 5vw;
+  margin: 0;
+}
+
+.train-button p {
+  margin-left: 20px;
+}
+
+.edit-button {
+  height: 5vw;
+  width: 5vw;
+  background-color: rgb(37, 108, 240);
+  color: white;
+  margin: 0;
+}
+
+.edit-button p {
+  text-align: center;
+}
+
+.receptive-training {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.responses {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 0;
+  padding: 0;
+}
+
+.response-option {
+  height: 50px;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.response-option:hover {
+  background-color: rgb(37, 108, 240);
+  color: white;
+}
+
+.training-navigation {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.training-navigation a {
+  text-decoration: none;
+  color: black;
+  width: 25%;
+  background-color: rgb(37, 108, 240);
+}
+
+.decks-text {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.next-button {
+  width: 25%;
+  background-color: goldenrod;
+}
+
+.next-button p {
+  width: 100%;
+  text-align: center;
+}
+
+.next-button:hover {
+  color: white;
+  background-color: rgb(37, 108, 240);
+}
+

@@ -15,10 +15,8 @@
   {{/each}}
 </div>
 
-<a href="/decks">Back</a>
-
-<h1>{{name}}</h1>
-<div>
+<div class="receptive-training">
+  <h1>{{name}}</h1>
   <div class="gif-container"></div>
   <ul class="responses">
     <li class="response-option"></li>
@@ -26,10 +24,15 @@
     <li class="response-option"></li>
     <li class="response-option"></li>
   </ul>
-</div>
 
-<div class="next-button">
-  <h1>Next</h1>
+  <nav class="training-navigation">
+    <a href="/decks">
+      <p class="decks-text">Decks</p>
+    </a>
+    <div class="next-button">
+      <p>Next</p>
+    </div>
+  </nav>
 </div>
 
 <script src="/js/receptive.js"></script>

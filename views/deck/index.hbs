@@ -1,16 +1,27 @@
-<form class="new-deck-form" action="/decks/new" method="POST">
-  <input type="text" name="name">
-  <button>New Deck</button>
-</form>
+<div class="deck-index">
+  <h1>Training Decks</h1>
 
-{{#each this}}
-{{#if this.name}}
-<div class="deck-container">
-  <p>{{this.name}}</p>
-  {{!-- TODO add urls for expressive & receptive drills --}}
-  <a href="/decks/{{this.id}}/expressive">Expressive</a>
-  <a href="/decks/{{this.id}}/receptive">Receptive</a>
-  <a href="/decks/{{this.id}}">View cards</a>
+  {{#each this}}
+  {{#if this.name}}
+  <div class="deck-container">
+    {{!-- <a href="/decks/{{this.id}}/expressive">Expressive</a> --}}
+    <a class="train-link" href="/decks/{{this.id}}/receptive">
+      <div class="train-button">
+        <p>{{this.name}}</p>
+      </div>
+    </a>
+    <a href="/decks/{{this.id}}">
+      <div class="edit-button">
+        <p>Edit</p>
+      </div>
+    </a>
+  </div>
+  {{/if}}
+  {{/each}}
+
+  <form class="new-deck-form" action="/decks/new" method="POST">
+    <input type="text" name="name">
+    <button>Add</button>
+  </form>
 </div>
-{{/if}}
-{{/each}}
+
