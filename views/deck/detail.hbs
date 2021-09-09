@@ -1,29 +1,31 @@
-<a href="/decks">Back</a>
-<h1>{{deck.name}}</h1>
-<div class="used-card-section">
-  {{#each deck.flashcards}}
-  {{#if this.name}}
-  <div class="flashcard-container">
-    <p>{{this.name}}</p>
-    <form action="/decks/{{../deck.id}}/remove/{{this.name}}" method="POST"><button>Remove</button></form>
+<div class="split-view">
+  <div class="used-card-section">
+    <div>
+      <a class="decks-button" href="/decks">
+        <p>Decks</p>
+      </a>
+      <h1>{{deck.name}}</h1>
+    </div>
+    <form action="/decks/{{deck.id}}/update" method="POST">
+      <input type="text" name="name">
+      <button>Rename</button>
+    </form>
+    {{#each deck.flashcards}}
+    {{#if this.name}}
+    <div class="flashcard-container">
+      <p>{{this.name}}</p>
+      <form action="/decks/{{../deck.id}}/remove/{{this.name}}" method="POST"><button>Remove</button></form>
+    </div>
+    {{/if}}
+    {{/each}}
+    <form action="/decks/{{deck.id}}/delete" method="POST"><button>Delete Deck</button></form>
   </div>
-  {{/if}}
-  {{/each}}
+  <div class="selectable-card-section">
+    {{#each flashcards}}
+    {{#if this.name}}
+    <p>{{this.name}}</p>
+    <form action="/decks/{{../deck.id}}/add/{{this.id}}" method="POST"><button>Add</button></form>
+    {{/if}}
+    {{/each}}
+  </div>
 </div>
-
-<h1>Cards you can add</h1>
-<div class="selectable-card-section">
-  {{#each flashcards}}
-  {{#if this.name}}
-  <p>{{this.name}}</p>
-  <form action="/decks/{{../deck.id}}/add/{{this.id}}" method="POST"><button>Add</button></form>
-  {{/if}}
-  {{/each}}
-</div>
-
-<form action="/decks/{{deck.id}}/update" method="POST">
-  <input type="text" name="name">
-  <button>Rename</button>
-</form>
-
-<form action="/decks/{{deck.id}}/delete" method="POST"><button>Delete Deck</button></form>

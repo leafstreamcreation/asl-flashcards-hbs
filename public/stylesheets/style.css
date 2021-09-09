@@ -207,14 +207,14 @@ li a:hover {
   justify-content: space-evenly;
 }
 
-.training-navigation a {
+.decks-button {
   text-decoration: none;
   color: black;
   width: 25%;
   background-color: rgb(37, 108, 240);
 }
 
-.decks-text {
+.decks-button p {
   width: 100%;
   text-align: center;
   color: white;
@@ -233,5 +233,16 @@ li a:hover {
 .next-button:hover {
   color: white;
   background-color: rgb(37, 108, 240);
+}
+
+.split-view {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.split-view div {
+  margin: 0;
+  width: 50%;
 }
 
